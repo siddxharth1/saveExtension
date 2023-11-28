@@ -1,0 +1,10 @@
+{
+  "name": "TaskTracker",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "description": "Save your tasks and track them",
+  "action": {
+    "default_title": "TaskTracker",
+    "default_popup": "index.html"
+  }
+}

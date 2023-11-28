@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width: 400px;
+    padding: 20px;
+    background-color: #d2ffff;
+    border-radius: 10px;
+}
+h1{
+    /* color: white; */
+    margin-bottom: 10px;
+}
+button{
+    padding: 4px;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}
+#textInput{
+    background-color: transparent;
+    padding: 5px;
+    border: 1px solid #048989;
+    border-radius: 3px;
+    width: 75%;
+    outline: none;
+}
+
+#submitButton{
+    padding: 4px 8px;
+    background-color: #47bbec;
+    border: 2px solid #048989;
+    color: #00405b;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#submitButton:disabled{
+    color: #37b0e4;
+    background-color: #a0e9f4;
+    border: 2px solid #a0e9f4;
+    cursor: not-allowed;
+}
+.textarea{
+    resize: none;
+    padding: 5px;
+    padding-top: 10px;
+    display: block;
+    overflow: hidden;
+    resize: none;
+    width: 360px;
+    height: 24px;
+    background-color: beige;
+    border-radius: 3px;
+    border: 1px solid rgb(127, 127, 40);
+}
+.textarea:disabled{
+    color: black;
+}
+.editDlt{
+    transform: translateX(-60px);
+    display: flex;
+    gap: 5px;
+}
+.item{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.inputData{
+    display: flex;
+    align-items: center;
+}
+
+.btns{
+    display: none;
+    transform: translateX(-60px);
+    gap: 5px;
+}
+.editBtn{
+    background-color: #52ff86;
+    border: 1px solid darkgreen;
+}
+.bi-pencil-square{
+    color: rgb(0, 42, 0);
+}
+.dltBtn{
+    background-color: rgb(255, 61, 61);
+    border: 1px solid rgb(103, 0, 0);
+}
+.cancelBtn{
+    background-color: rgb(255, 61, 61);
+    border: 1px solid rgb(103, 0, 0);
+}
+.bi-trash3, .bi-x{
+    color: rgb(73, 0, 0);
+}
+.saveBtn{
+    background-color: rgb(66, 232, 66);
+    border: 1px solid darkgreen;
+}
+.bi-check2{
+    color: rgb(0, 41, 0);
+}
