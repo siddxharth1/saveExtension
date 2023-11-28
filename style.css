@@ -42,9 +42,17 @@ button{
     border: 2px solid #a0e9f4;
     cursor: not-allowed;
 }
+
+.nthnToshw{
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
 .textarea{
     resize: none;
     padding: 5px;
+    padding-left: 7px;
     padding-top: 10px;
     display: block;
     overflow: hidden;
@@ -80,27 +88,38 @@ button{
     gap: 5px;
 }
 .editBtn{
-    background-color: #52ff86;
-    border: 1px solid darkgreen;
+    background-color: transparent;
+    border: none;
+    /* background-color: #52ff86;
+    border: 1px solid darkgreen; */
 }
 .bi-pencil-square{
-    color: rgb(0, 42, 0);
+    color: rgb(0, 111, 0);
 }
 .dltBtn{
-    background-color: rgb(255, 61, 61);
-    border: 1px solid rgb(103, 0, 0);
+    background-color: transparent;
+    border: none;
+    /* background-color: rgb(255, 61, 61); */
+    /* border: 1px solid rgb(103, 0, 0); */
 }
 .cancelBtn{
-    background-color: rgb(255, 61, 61);
-    border: 1px solid rgb(103, 0, 0);
+    background-color: transparent;
+    border: none;
+    /* background-color: rgb(255, 61, 61);
+    border: 1px solid rgb(103, 0, 0); */
 }
-.bi-trash3, .bi-x{
+.bi-trash3{
+    color: rgb(103, 0, 0);
+} 
+.bi-x{
     color: rgb(73, 0, 0);
 }
 .saveBtn{
-    background-color: rgb(66, 232, 66);
-    border: 1px solid darkgreen;
+    background-color: transparent;
+    border: none;
+    /* background-color: rgb(66, 232, 66);
+    border: 1px solid darkgreen; */
 }
 .bi-check2{
-    color: rgb(0, 41, 0);
+    color: rgb(0, 111, 0);
 }

@@ -21,7 +21,7 @@ console.log(data)
 //display local storage data in html
 const displayItem = () => {
     let items = ''
-    for (let i = data.length -1 ; i >=0 ; i--) {
+    for (let i = data.length - 1; i >= 0; i--) {
         items += `<div class="item">
                             <div class="inputData">
                                 <textarea class="textarea" disabled>${data[i]}</textarea>
@@ -44,12 +44,17 @@ const displayItem = () => {
     activatecancelEventlistner()
     activateSaveEventlistner()
 }
-displayItem()
+if (data.length > 0) {
+    displayItem()
+}
+else {
+    document.getElementById('items').innerHTML = "<p class='nthnToshw'>Nothing to show</p>"
+}
 
-function activateDeleteEventlistner(){
+function activateDeleteEventlistner() {
     const deleteBtn = document.querySelectorAll('.dltBtn')
     deleteBtn.forEach((deleteBtn, index) => {
-        deleteBtn.addEventListener("click", ()=>{
+        deleteBtn.addEventListener("click", () => {
             data.splice(index, 1)
             localStorage.setItem('todo-list-data', JSON.stringify(data))
             displayItem()
@@ -57,14 +62,14 @@ function activateDeleteEventlistner(){
     });
 }
 
-function aactivateEditEventlistner(){
+function aactivateEditEventlistner() {
     const editBtn = document.querySelectorAll('.editBtn')
     const btns = document.querySelectorAll('.btns')
     const textarea = document.querySelectorAll('.textarea')
     const editDlt = document.querySelectorAll('.editDlt')
 
-    editBtn.forEach((editBtn, index)=>{
-        editBtn.addEventListener(("click"), ()=>{
+    editBtn.forEach((editBtn, index) => {
+        editBtn.addEventListener(("click"), () => {
             btns[index].style.display = 'flex'
             textarea[index].disabled = false
             editDlt[index].style.display = 'none'
@@ -72,14 +77,14 @@ function aactivateEditEventlistner(){
     })
 }
 
-function activatecancelEventlistner(){
+function activatecancelEventlistner() {
     const cancelBtn = document.querySelectorAll('.cancelBtn')
     const btns = document.querySelectorAll('.btns')
     const textarea = document.querySelectorAll('.textarea')
     const editDlt = document.querySelectorAll('.editDlt')
 
-    cancelBtn.forEach((cancelBtn, index)=>{
-        cancelBtn.addEventListener(("click"), ()=>{
+    cancelBtn.forEach((cancelBtn, index) => {
+        cancelBtn.addEventListener(("click"), () => {
             btns[index].style.display = 'none'
             textarea[index].disabled = true
             editDlt[index].style.display = 'flex'
@@ -87,14 +92,14 @@ function activatecancelEventlistner(){
     })
 }
 
-function activateSaveEventlistner(){
+function activateSaveEventlistner() {
     const saveBtn = document.querySelectorAll('.saveBtn')
     const textarea = document.querySelectorAll('.textarea')
     const btns = document.querySelectorAll('.btns')
     const editDlt = document.querySelectorAll('.editDlt')
 
-    saveBtn.forEach((saveBtn, index)=>{
-        saveBtn.addEventListener(("click"), ()=>{
+    saveBtn.forEach((saveBtn, index) => {
+        saveBtn.addEventListener(("click"), () => {
             data[index] = textarea[index].value
             localStorage.setItem("todo-list-data", JSON.stringify(data))
             btns[index].style.display = 'none'
@@ -107,7 +112,7 @@ function activateSaveEventlistner(){
 //save data to local storage
 button.addEventListener("click", (e) => {
     e.preventDefault();
-    data.push( input.value )
+    data.push(input.value)
     localStorage.setItem('todo-list-data', JSON.stringify(data))
     displayItem()
     input.value = ''
