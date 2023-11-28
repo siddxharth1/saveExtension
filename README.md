@@ -3,7 +3,7 @@ A chrome extension which helps Organize, track, and achieve your goals.
 
 <hr/>
 
-How to use: 
+ <h2>How to use: </h2>
   1. Download the zip file (don't forgot to extract)
   2. Open chrome browser
   3. Click 3 dot > Extensions > Manage extension
