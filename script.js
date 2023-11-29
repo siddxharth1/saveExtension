@@ -21,7 +21,7 @@ console.log(data)
 //display local storage data in html
 const displayItem = () => {
     let items = ''
-    for (let i = data.length - 1; i >= 0; i--) {
+    for (let i = 0; i < data.length; i++) {
         items += `<div class="item">
                             <div class="inputData">
                                 <textarea class="textarea" disabled>${data[i]}</textarea>
@@ -112,7 +112,7 @@ function activateSaveEventlistner() {
 //save data to local storage
 button.addEventListener("click", (e) => {
     e.preventDefault();
-    data.push(input.value)
+    data.unshift(input.value)
     localStorage.setItem('todo-list-data', JSON.stringify(data))
     displayItem()
     input.value = ''
