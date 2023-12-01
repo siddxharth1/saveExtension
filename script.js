@@ -26,13 +26,13 @@ const displayItem = () => {
                             <div class="inputData">
                                 <textarea class="textarea" disabled>${data[i]}</textarea>
                                 <div class="editDlt">
-                                    <button class="editBtn"> <i class="bi bi-pencil-square"></i></button>
-                                    <button class="dltBtn"> <i class="bi bi-trash3"></i></button>
+                                    <button class="editBtn"> <img src="pencil-square.svg" class="bi-pencil-square" alt="save"></button>
+                                    <button class="dltBtn"> <img src="trash3.svg" alt="save"></button>
                                 </div>
                             </div>
                             <div class="btns">
-                                <button class="saveBtn"><i class="bi bi-check2"></i></button>
-                                <button class="cancelBtn"><i class="bi bi-x"></i></button>
+                                <button class="saveBtn"> <img src="check2.svg" alt="save"></i></button>
+                                <button class="cancelBtn"> <img src="x.svg" alt="save"></button>
                             </div>
                         </div>`
     }

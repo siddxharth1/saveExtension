@@ -6,11 +6,10 @@
 body{
     width: 400px;
     padding: 20px;
-    background-color: #d2ffff;
+    background-color: #d2ffff; 
     border-radius: 10px;
 }
 h1{
-    /* color: white; */
     margin-bottom: 10px;
 }
 button{
@@ -86,39 +85,8 @@ button{
     transform: translateX(-60px);
     gap: 5px;
 }
-.editBtn{
+
+:is(.saveBtn, .cancelBtn, .dltBtn, .editBtn){
     background-color: transparent;
     border: none;
-    /* background-color: #52ff86;
-    border: 1px solid darkgreen; */
-}
-.bi-pencil-square{
-    color: rgb(0, 111, 0);
-}
-.dltBtn{
-    background-color: transparent;
-    border: none;
-    /* background-color: rgb(255, 61, 61); */
-    /* border: 1px solid rgb(103, 0, 0); */
-}
-.cancelBtn{
-    background-color: transparent;
-    border: none;
-    /* background-color: rgb(255, 61, 61);
-    border: 1px solid rgb(103, 0, 0); */
-}
-.bi-trash3{
-    color: rgb(103, 0, 0);
-} 
-.bi-x{
-    color: rgb(73, 0, 0);
-}
-.saveBtn{
-    background-color: transparent;
-    border: none;
-    /* background-color: rgb(66, 232, 66);
-    border: 1px solid darkgreen; */
-}
-.bi-check2{
-    color: rgb(0, 111, 0);
 }
