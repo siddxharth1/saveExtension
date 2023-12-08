@@ -8,10 +8,9 @@ body{
     padding: 20px;
     background-color: #d2ffff; 
     border-radius: 10px;
+    padding: 25px ;
 }
-h1{
-    margin-bottom: 10px;
-}
+
 button{
     padding: 4px;
     border-radius: 3px;
@@ -47,19 +46,45 @@ button{
     font-weight: 600;
     text-align: center;
 }
-.textarea{
-    resize: none;
-    padding: 5px;
-    padding-left: 7px;
-    padding-top: 10px;
-    display: block;
-    overflow: hidden;
-    resize: none;
-    width: 360px;
-    height: 24px;
+h1{
+    margin-bottom: 5px;
+}
+.items{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    width: 380px;
     background-color: beige;
     border-radius: 3px;
     border: 1px solid rgb(127, 127, 40);
+}
+.textarea{
+    resize: none;
+    padding: 10px 0;
+    margin-left: 10px;
+    display: block;
+    overflow: hidden;
+    resize: none;
+    background-color: transparent;
+    border: none;
+    width: 350px;
+    height: 16px;
+    pointer-events: none;
+}
+.bi-three-dots-vertical{
+    width: 5px;
+    font-size: 13px;
+    pointer-events: none;
+}
+.textarea:focus{
+    outline: none;
+    border: none;
 }
 .textarea:disabled{
     color: black;
@@ -69,11 +94,7 @@ button{
     display: flex;
     gap: 5px;
 }
-.item{
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-}
+
 
 .inputData{
     display: flex;
@@ -89,4 +110,8 @@ button{
 :is(.saveBtn, .cancelBtn, .dltBtn, .editBtn){
     background-color: transparent;
     border: none;
+}
+
+.dragging{
+    opacity: 0;
 }
