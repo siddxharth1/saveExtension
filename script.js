@@ -1,7 +1,5 @@
 const button = document.getElementById("submitButton")
 const input = document.getElementById("textInput")
-const dataHTML = document.getElementById('data')
-
 //disable button if input is
 button.disabled = true;
 input.addEventListener("keyup", (e) => {
@@ -11,7 +9,7 @@ input.addEventListener("keyup", (e) => {
     else {
         button.disabled = false
     }
-    if(e.key === 'Enter'){
+    if (e.key === 'Enter') {
         e.preventDefault()
         button.click()
         button.disabled = false
@@ -28,8 +26,11 @@ const displayItem = () => {
     let items = ''
     for (let i = 0; i < data.length; i++) {
         items += `<div class="item" draggable="true">
-                    <i class="bi bi-three-dots-vertical"></i>
-                    <i class="bi bi-three-dots-vertical"></i>
+                        <div class="dragItems">
+                            <i class="bi bi-three-dots-vertical"></i>
+                            <i class="bi bi-three-dots-vertical"></i>
+                        </div>
+                    
                             <div class="inputData">
                                 <textarea class="textarea" disabled>${data[i]}</textarea>
                                 <div class="editDlt">
@@ -46,7 +47,7 @@ const displayItem = () => {
     // console.log(items)
 
     document.getElementById('items').innerHTML = items
-
+    
     activateDeleteEventlistner()
     aactivateEditEventlistner()
     activatecancelEventlistner()
@@ -133,7 +134,7 @@ draggables.forEach(draggable => {
         setTimeout(() => {
             draggable.classList.add('dragging')
         }, 0);
-        
+
     })
     draggable.addEventListener('dragend', () => {
         draggable.classList.remove('dragging')
@@ -141,38 +142,35 @@ draggables.forEach(draggable => {
 })
 
 const itemsList = document.getElementById('items')
-itemsList.addEventListener('dragover', e=>{
-    //find the sibling after which the dragging element is dropped
+itemsList.addEventListener('dragover', e => {
     const afterElement = getDragAfterElement(itemsList, e.clientY)
 
-    //place the element after the sibling
     const draggable = document.querySelector('.dragging')
-    if(afterElement == null){
+    if (afterElement == null) {
         itemsList.appendChild(draggable)
     }
-    else{
+    else {
         itemsList.insertBefore(draggable, afterElement)
     }
-    //dont create a new data array it will increase the comple
 
     let newData = []
     const textarea = document.querySelectorAll('.textarea')
-    for(let i=0; i<textarea.length; i++){
+    for (let i = 0; i < textarea.length; i++) {
         newData.push(textarea[i].value)
     }
     data = newData
     localStorage.setItem('todo-list-data', JSON.stringify(data))
 })
 
-function getDragAfterElement(itemsList, y){
+function getDragAfterElement(itemsList, y) {
     const draggableElements = [...itemsList.querySelectorAll('.item:not(.dragging)')]
-    return draggableElements.reduce((closest, child)=>{
+    return draggableElements.reduce((closest, child) => {
         const box = child.getBoundingClientRect()
         const offset = y - box.top - box.height / 2
-        if(offset < 0 && offset > closest.offset){
-            return {offset: offset, element: child}
-        }else{
+        if (offset < 0 && offset > closest.offset) {
+            return { offset: offset, element: child }
+        } else {
             return closest
         }
-    }, {offset: Number.NEGATIVE_INFINITY}).element
+    }, { offset: Number.NEGATIVE_INFINITY }).element
 }

@@ -6,11 +6,12 @@
 body{
     width: 400px;
     padding: 20px;
-    background-color: #d2ffff; 
-    border-radius: 10px;
+    background-color: #cee1ff; 
     padding: 25px ;
 }
-
+h1{
+    color: #243a6b;
+}
 button{
     padding: 4px;
     border-radius: 3px;
@@ -20,23 +21,29 @@ button{
 #textInput{
     background-color: transparent;
     padding: 5px;
+    padding-left: 10px;
     border: 1px solid #048989;
-    border-radius: 3px;
+    border-radius: 10px;
     width: 75%;
+    outline: none;
 }
+
+/* #textInput:focus{
+    background: rgba(0, 0, 0, 0.087);
+} */
 
 #submitButton{
     padding: 4px 8px;
-    background-color: #47bbec;
-    border: 2px solid #048989;
+    background-color: #5090fe;
+    border: 2px solid #cee1ff;
     color: #00405b;
-    border-radius: 3px;
+    border-radius: 10px;
     cursor: pointer;
 }
 #submitButton:disabled{
-    color: #37b0e4;
-    background-color: #a0e9f4;
-    border: 2px solid #a0e9f4;
+    color: #60728e;
+    background-color: #7aa0e3;
+    border: 2px solid #cee1ff;
     cursor: not-allowed;
 }
 
@@ -60,10 +67,11 @@ h1{
     display: flex;
     align-items: center;
     width: 380px;
-    background-color: beige;
-    border-radius: 3px;
-    border: 1px solid rgb(127, 127, 40);
+    background-color: rgb(255, 255, 230);
+    border-radius: 10px;
+    border: 1px solid rgb(190, 190, 66);
 }
+
 .textarea{
     resize: none;
     padding: 10px 0;
@@ -74,13 +82,20 @@ h1{
     background-color: transparent;
     border: none;
     width: 350px;
-    height: 16px;
-    pointer-events: none;
+    height: 20px;
 }
+.dragItems{
+    display: flex;
+    cursor: grab;
+    padding: 5px;
+}
+
 .bi-three-dots-vertical{
-    width: 5px;
+    margin: 0;
+    padding: 0;
     font-size: 13px;
     pointer-events: none;
+    width: 6px;
 }
 .textarea:focus{
     outline: none;
@@ -90,7 +105,7 @@ h1{
     color: black;
 }
 .editDlt{
-    transform: translateX(-60px);
+    transform: translate(-60px, 2px);
     display: flex;
     gap: 5px;
 }
@@ -103,15 +118,23 @@ h1{
 
 .btns{
     display: none;
-    transform: translateX(-60px);
+    transform: translate(-60px, 2px);
     gap: 5px;
 }
 
 :is(.saveBtn, .cancelBtn, .dltBtn, .editBtn){
     background-color: transparent;
     border: none;
+    height: 25px;
+    border-radius: 20px;
+    margin-bottom: 5px;
 }
 
-.dragging{
-    opacity: 0;
+.editBtn:hover, .saveBtn:hover{
+
+    background: rgb(199, 255, 199);
+}
+
+.cancelBtn:hover, .dltBtn:hover{
+    background: rgb(255, 210, 210);
 }
