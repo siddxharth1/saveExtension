@@ -34,14 +34,15 @@ button{
 
 #submitButton{
     padding: 4px 8px;
-    background-color: #5090fe;
+    background-color: #4267a6;
     border: 2px solid #cee1ff;
-    color: #00405b;
+    color: #000b32;
     border-radius: 10px;
     cursor: pointer;
+    /* font-weight: 00; */
 }
 #submitButton:disabled{
-    color: #60728e;
+    color: #2e4c7c;
     background-color: #7aa0e3;
     border: 2px solid #cee1ff;
     cursor: not-allowed;
