@@ -12,3 +12,6 @@ A chrome extension which helps Organize, track, and achieve your goals.
   6. Now you can use this extension in your browser
 
 <a href="https://github.com/siddxharth1/saveExtension/archive/refs/heads/main.zip">Download Link</a>
+
+
+<img src="https://github.com/siddxharth1/images/blob/main/Screenshot%202024-02-09%20092939.png" alt="extension image">
